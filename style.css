@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.header {
+    border: solid 2px white;
+}
