@@ -7,7 +7,7 @@ function addName(){
 const nameInput = document.getElementById('nameInput')
 const name = nameInput.value.trim()
 nameArray.push(name)
-// displayName()
+displayNames()
 nameInput.value = ''
 
 }
@@ -34,6 +34,32 @@ function displayNames(){
     }
 }
 
+function pickRandomName () {
+    const randomNameDiv = document.getElementById('randomName')
+    randomNameDiv.textContent = ''
+
+    const randomNumber = Math.floor(Math.random() * nameArray.length)
+    const randomName = nameArray[randomNumber]
+
+    randomNameDiv.textContent = randomName
+
+    nameArray.splice(randomNumber, 1)
+
+    displayNames()
+}
+
+
+
+
+
+
+
+
+
+
 
 //add onclick
 document.getElementById('addNameBtn').addEventListener('click', addName)
+
+//add onclick
+document.getElementById('pickRandomBtn').addEventListener('click', pickRandomName)
