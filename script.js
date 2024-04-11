@@ -63,3 +63,17 @@ document.getElementById('addNameBtn').addEventListener('click', addName)
 
 //add onclick
 document.getElementById('pickRandomBtn').addEventListener('click', pickRandomName)
+
+
+
+// get the input
+var input = document.getElementById("nameInput");
+
+// have a function run when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // when the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("addNameBtn").click();
+  }
+});
